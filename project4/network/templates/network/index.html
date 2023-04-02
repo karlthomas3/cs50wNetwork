@@ -1,0 +1,33 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+    <h2 class="page-title" id="all-title">All Posts</h2>
+    {% if user.is_authenticated %}
+        <div id="compose-view"class='box'>
+            <form id="post-form">
+                {% csrf_token %}
+                <h4>New Post</h4>
+                <textarea id='post-text' type='text' placeholder='Write something'></textarea>
+                <input type='submit' class="btn btn-outline-primary" value="submit"></input>
+            </form>
+        </div>
+    {% endif %}
+    <div id="profile-view">
+        <h2 class="page-title" id="profile-name"></h2>
+        <div id="follow-counts"></div>
+        {% if user.is_authenticated %}
+            <button class="btn btn-outline-primary" id="follow-button" style="margin-left: 2%;"></button>
+        {% endif %}
+    </div>
+    <div id="feed"></div>
+    <div style="text-align:center;" id="pagination">
+       <button id="previous-btn" class="btn btn-outline-primary">Previous</button>
+       <button id="next-btn" class="btn btn-outline-primary">Next</button>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static '/network/index.js' %}"></script>
+{% endblock %}

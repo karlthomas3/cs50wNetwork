@@ -1,0 +1,29 @@
+.box {
+	height: 200px;
+	border: 1px;
+	border-style: solid;
+	align-self: center;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 1%;
+	padding-left: 2%;
+	padding-top: 1%;
+	display: flex;
+	flex-direction: column;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+}
+textarea {
+	display: inline-block;
+	width: 98%;
+	height: 100px;
+}
+.nav-link {
+	border: none;
+}
+.page-title {
+	margin-left: 2%;
+}
